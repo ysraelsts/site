@@ -1,0 +1,27 @@
+# Configuracao do site no Netlify.
+#
+# Este repositorio e PUBLICO no GitHub e so contem o que o visitante ve:
+# paginas de vendas e as artes de compartilhamento. Nada de credencial,
+# nada de documento interno, nada de preco, nada de arquivo de entrega.
+# O material do produto (PDF, ZIP, planilhas, copy crua) vive em outro lugar,
+# em C:\Donna\09_PRODUTOS\<nome-do-produto>\, e nunca entra no git.
+
+[build]
+  publish = "."
+  command = ""
+
+# Sem framework, sem build step: o HTML ja sai pronto do _build.
+# Um comando de build aqui seria o jeito mais facil de quebrar o site
+# sem nenhum ganho, ja que nao existe etapa de compilacao.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# A imagem de compartilhamento e imutavel por muito tempo, o resto nao.
+[[headers]]
+  for = "/p/*/banner_social.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1,0 +1,43 @@
+# Este repositorio so pode conter o que o visitante ve.
+#
+# As defendas abaixo sao o controle real: o repositorio e publico no GitHub
+# e qualquer pessoa com a URL le o historico inteiro, inclusive versoes
+# antigas. Apagar um arquivo depois nao resolve, o conteudo continua no
+# historico.
+#
+# Ja saiu errado antes: 11_COPY_E_VENDAS\preco.md e ficha_de_cadastro.md
+# sao documento interno e jamais devem chegar aqui.
+
+# nunca, em nenhuma hipotese
+*.env
+.env*
+*_secret*
+*secret*.json
+*_secret.json
+kiwify_secret*
+credencial*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# material que o comprador recebe. Fica no disco, nao no site.
+*.pdf
+*.zip
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.docx
+*.pptx
+*.mp4
+*.mov
+
+# backup e sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+*.bak
+*~
