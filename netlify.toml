@@ -5,14 +5,17 @@
 # nada de documento interno, nada de preco, nada de arquivo de entrega.
 # O material do produto (PDF, ZIP, planilhas, copy crua) vive em outro lugar,
 # em C:\Donna\09_PRODUTOS\<nome-do-produto>\, e nunca entra no git.
-
-[build]
-  publish = "."
-  command = ""
-
-# Sem framework, sem build step: o HTML ja sai pronto do _build.
-# Um comando de build aqui seria o jeito mais facil de quebrar o site
-# sem nenhum ganho, ja que nao existe etapa de compilacao.
+#
+# SEM bloco [build] de proposito.
+#
+# Sem build nao existe nada a compilar: o HTML ja sai pronto do _build, com a
+# arte embutida em base64. A secao [build] foi removida porque um
+# 'command = ""' explicito e a forma facil de o build do Netlify recusar o
+# deploy, e a unica coisa que ele faz e publicar a raiz do repositorio,
+# que e exatamente o padrao quando a secao nao existe.
+#
+# Conectar este repositorio ao site que ja esta no ar troca o conteudo
+# servido, sem mexer na URL. Se o build falhar, o deploy anterior continua.
 
 [[headers]]
   for = "/*"
@@ -20,8 +23,9 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# A imagem de compartilhamento e imutavel por muito tempo, o resto nao.
+# As artes nao mudam de nome a cada versao, entao podem ficar em cache por
+# muito tempo. O resto do site nao, para que uma correcao de copy apareca.
 [[headers]]
-  for = "/p/*/banner_social.png"
+  for = "/*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
