@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordem Digital — Organize sua vida digital</title>
+<meta name="description" content="Ordem Digital: organize arquivos, e-mail e celular em um fim de semana. 7 módulos, 38 páginas, checklist de 8 folhas. de R$ 29,90 por R$ 14,99, garantia de 7 dias.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://excel-descomplicado.netlify.app/p/ordem-digital/"
+<meta property="og:site_name" content="STSCORP">
+<meta property="og:title" content="Ordem Digital — Organize sua vida digital">
+<meta property="og:description" content="7 módulos, 38 páginas, checklist de 8 folhas. de R$ 29,90 por R$ 14,99, garantia de 7 dias.">
+<meta property="og:image" content="https://excel-descomplicado.netlify.app/p/ordem-digital/banner_social.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:,">
+<style>
+:root{
+  --acento:#0E8C9E; --acento-esc:#0A6C7A; --acento-cl:#22D3EE;
+  --tinta:#12161A; --texto:#3C4650; --grafite:#1B2126;
+  --cinza:#5A6472; --branco:#fff; --folha:#F6F8F9;
+  --erro:#9C2B20; --erro-fundo:#FDECEA;
+  --borda:#E1E6EA; --borda-forte:#CBD4DA;
+  --max:1120px;
+  --fonte:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --mono:Consolas,"Cascadia Mono",monospace;
+  --sombra-1:0 1px 2px rgba(18,22,26,.05),0 8px 24px rgba(18,22,26,.06);
+  --sombra-2:0 26px 60px rgba(18,22,26,.24);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+body{margin:0;font-family:var(--fonte);color:var(--texto);background:var(--branco);
+  line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;height:auto}
+a{color:var(--acento-esc)}
+p a,li a{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid var(--acento);outline-offset:3px;border-radius:6px}
+h1,h2,h3{line-height:1.14;letter-spacing:-.02em;margin:0 0 .45em;color:var(--tinta)}
+h1{font-size:clamp(2.5rem,6vw,3.9rem);font-weight:800}
+h2{font-size:clamp(1.65rem,3.4vw,2.4rem);font-weight:800}
+h3{font-size:1.14rem;font-weight:700;margin-bottom:.35em}
+p{margin:0 0 1em}
+strong{color:var(--tinta)}
+s{opacity:.9}
+code{font-family:var(--mono);background:var(--folha);border:1px solid var(--borda);
+  border-radius:6px;padding:.08em .35em;font-size:.92em}
+
+/* pular para o conteudo (primeiro tab da pagina) */
+.skip{position:absolute;left:-9999px;top:0;background:var(--tinta);color:#fff;
+  padding:12px 20px;border-radius:0 0 10px 0;font-weight:700;
+  text-decoration:none;z-index:60}
+.skip:focus{left:0}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+main{display:block}
+section{padding:clamp(52px,7vw,92px) 0;scroll-margin-top:74px}
+section.par{background:var(--folha);border-top:1px solid var(--borda);
+  border-bottom:1px solid var(--borda)}
+h2,h3{scroll-margin-top:84px}
+.rot{color:var(--acento-esc);font-size:.78rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7em}
+.rot.claro{color:rgba(255,255,255,.78)}
+.lead{font-size:clamp(1.05rem,1.5vw,1.19rem);color:var(--cinza);max-width:40em}
+.subtitulo{font-size:clamp(1.2rem,2.6vw,1.72rem);font-weight:600;
+  color:var(--acento-esc);letter-spacing:-.015em;margin:-.1em 0 .7em}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.93);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--borda)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:18px;min-height:66px}
+.marca{font-weight:800;letter-spacing:-.01em;font-size:1.06rem;
+  color:var(--tinta);text-decoration:none}
+.marca span{color:var(--acento-esc)}
+.nav{display:flex;gap:24px}
+.nav a{color:var(--cinza);text-decoration:none;font-weight:600;font-size:.95rem}
+.nav a:hover{color:var(--acento-esc)}
+@media (max-width:860px){.nav{display:none}}
+
+/* botao */
+.btn{display:inline-block;background:var(--acento-esc);color:#fff;
+  text-decoration:none;font-weight:700;padding:16px 32px;border-radius:12px;
+  border:0;cursor:pointer;font-size:1.05rem;font-family:var(--fonte);
+  box-shadow:0 12px 26px rgba(10,108,122,.26);
+  transition:transform .15s ease,background .15s ease}
+.btn:hover{background:#08555F;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:transparent;color:var(--acento-esc);box-shadow:none;
+  box-shadow:inset 0 0 0 2px var(--acento-esc);padding:14px 26px}
+.btn.g-min{font-size:.92rem;padding:10px 20px;border-radius:10px;
+  box-shadow:none}
+.cta{text-align:center;margin-top:30px}
+.cta .btn{margin:6px}
+
+/* pagina publicada antes de existir checkout */
+.sem-checkout{display:inline-block;border:1.5px dashed var(--borda-forte);
+  background:#fff;border-radius:12px;padding:14px 20px;color:var(--cinza);
+  font-size:.97rem;margin:14px 0 0;max-width:36em}
+
+/* hero */
+.hero{padding:clamp(40px,6vw,72px) 0 clamp(52px,7vw,84px);
+  background:linear-gradient(180deg,#fff 0%,var(--folha) 100%);
+  overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.06fr .94fr;
+  gap:clamp(32px,5vw,64px);align-items:center}
+.hero p.lead{font-size:clamp(1.06rem,1.6vw,1.2rem);max-width:34em}
+.hero .arte{width:100%;max-width:380px;margin:0 auto;display:block;
+  border-radius:14px;box-shadow:var(--sombra-2)}
+.provas{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;
+  margin:24px 0 0}
+.provas li{background:#fff;border:1px solid var(--borda);border-radius:999px;
+  padding:8px 16px;font-size:.88rem;font-weight:600;color:var(--cinza);
+  box-shadow:0 1px 2px rgba(18,22,26,.05)}
+.provas b{color:var(--acento-esc);font-weight:800}
+
+/* cartoes */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.card{background:#fff;border:1px solid var(--borda);border-radius:16px;
+  padding:26px 24px;box-shadow:var(--sombra-1);
+  transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(18,22,26,.10)}
+.card .n{display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:10px;background:#E4F5F9;
+  color:var(--acento-esc);font-weight:800;font-size:.95rem;margin-bottom:12px}
+.card p{color:var(--cinza);font-size:.96rem;margin:0}
+.cards.etapas{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card.etapa{position:relative;padding-top:22px}
+.card.etapa .quando{display:inline-block;background:var(--acento-esc);color:#fff;
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:5px 11px;border-radius:999px;margin-bottom:10px}
+.card.etapa ul.itens{list-style:none;margin:12px 0 0;padding:0}
+.card.etapa ul.itens li{border-top:1px solid var(--borda);padding:8px 0 0;
+  margin-top:8px}
+.card.etapa ul.itens li:first-child{border-top:0;padding-top:0;margin-top:0}
+.card.etapa ul.itens b{display:block;font-family:var(--mono);
+  font-size:.79rem;color:var(--tinta);font-weight:600}
+.card.etapa ul.itens span{display:block;font-size:.92rem;color:var(--cinza);
+  margin-top:2px}
+p.nota{max-width:46em;margin:22px auto 0;color:var(--cinza);font-size:.95rem;
+  text-align:center}
+.card .arq{font-family:var(--mono);font-size:.79rem;color:var(--cinza);
+  word-break:break-all}
+
+/* modulos */
+.mod{border-top:1px solid var(--borda);padding:26px 0;display:grid;
+  grid-template-columns:220px 1fr;gap:30px}
+.mod:last-child{border-bottom:1px solid var(--borda)}
+.mod .num{font-family:var(--mono);color:var(--acento-esc);font-weight:700;
+  font-size:.9rem;letter-spacing:.06em}
+.mod h3{font-size:1.22rem;margin:.15em 0 .1em}
+.mod .sub{color:var(--cinza);font-size:.94rem;margin:0 0 .6em}
+.mod ul{margin:0;padding-left:20px;color:var(--cinza);font-size:.95rem;
+  columns:2;column-gap:34px}
+.mod li{margin-bottom:.22em;break-inside:avoid}
+.mod li::marker{color:var(--acento-esc)}
+
+/* dois lados */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.lado{border-radius:16px;padding:28px 26px;border:1px solid var(--borda);
+  background:#fff;box-shadow:var(--sombra-1)}
+.lado.sim{background:#E9F8FB;border-color:#BFE8F0;box-shadow:none}
+.lado.nao{background:var(--erro-fundo);border-color:#F0CFCB;box-shadow:none}
+.lado h3{font-size:1.02rem;letter-spacing:.05em;text-transform:uppercase}
+.lado.sim h3{color:var(--acento-esc)}
+.lado.nao h3{color:var(--erro)}
+.lado ul{margin:0;padding-left:20px;font-size:.95rem}
+.lado li{margin-bottom:.35em}
+
+/* preco */
+.preco{background:linear-gradient(165deg,#0A6C7A 0%,var(--tinta) 100%);
+  color:#fff;border-radius:24px;padding:clamp(32px,5vw,52px) clamp(24px,4vw,48px);
+  max-width:640px;margin:0 auto;text-align:center;box-shadow:var(--sombra-2)}
+.preco .valor{display:flex;align-items:baseline;justify-content:center;
+  flex-wrap:wrap;gap:6px 18px;margin:.35em 0 .3em}
+.preco .de{font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:600;
+  color:#C6D0D6;text-decoration:line-through;
+  text-decoration-thickness:2px;text-decoration-color:#8A97A3}
+.preco .por{font-size:clamp(2.9rem,7vw,4.1rem);font-weight:800;
+  line-height:1;letter-spacing:-.035em;color:#fff}
+.preco .por small{font-size:.42em;font-weight:700;vertical-align:.6em;
+  margin-right:.12em;color:#BFEFF7}
+.preco .detalhe{color:rgba(255,255,255,.86);margin:0 0 24px}
+.preco .btn{background:#fff;color:var(--grafite) !important;box-shadow:none;
+  font-size:1.1rem;padding:17px 34px}
+.preco .btn:hover{background:#E6F7FB}
+.preco ul{list-style:none;padding:0;margin:26px 0 0;text-align:left;
+  display:inline-block;color:rgba(255,255,255,.94);font-size:.96rem}
+.preco ul li{padding-left:28px;position:relative;margin-bottom:.45em}
+.preco ul li::before{content:"¹3";position:absolute;left:0;font-weight:800;
+  color:var(--acento-cl)}
+.preco .sem-checkout{background:rgba(255,255,255,.06);color:#DCE4E9;
+  border-color:rgba(255,255,255,.35);text-align:left}
+.garantia{display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:22px;font-size:.93rem;color:rgba(255,255,255,.82)}
+
+/* faq */
+.faq details{border:1px solid var(--borda);border-radius:14px;background:#fff;
+  margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;font-size:1.01rem;
+  list-style:none;position:relative;padding-right:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:22px;top:50%;
+  transform:translateY(-50%);font-size:1.4rem;font-weight:400;
+  color:var(--acento-esc);line-height:1}
+.faq details[open] summary::after{content:"3"}
+.faq details[open] summary{border-bottom:1px solid var(--borda)}
+.faq .resp{padding:16px 22px 20px;color:var(--cinza);font-size:.97rem;margin:0}
+.faq .resp p:last-child{margin-bottom:0}
+
+/* final + rodape */
+.fim{text-align:center;background:linear-gradient(180deg,var(--folha),#fff)}
+.fim .arte{width:100%;max-width:840px;margin:0 auto 34px;display:block;
+  border-radius:16px;box-shadow:var(--sombra-1)}
+.rodape{border-top:1px solid var(--borda);padding:36px 0;font-size:.89rem;
+  color:var(--cinza);background:var(--folha)}
+.rodape p{margin:0 0 .5em}
+.rodape strong{color:var(--tinta)}
+.rodape a{color:var(--cinza)}
+
+@media (max-width:880px){
+  .hero .grid{grid-template-columns:1fr;gap:34px}
+  .hero .arte{max-width:300px}
+  .cards,.dos,.cards.etapas{grid-template-columns:1fr}
+  .mod{grid-template-columns:1fr;gap:8px}
+  .mod ul{columns:1}
+  .preco{border-radius:18px}
+  section{padding:46px 0}
+}
+@media print{
+  .topo,.cta,.skip,.fim .btn{display:none}
+  body{font-size:11pt;color:#000}
+  section{padding:18px 0}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#topo">Ordem <span>Digital</span></a>
+    <nav class="nav" aria-label="Seções da página">
+      <a href="#problema">O problema</a>
+      <a href="#programa">O programa</a>
+      <a href="#preco">Preço</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="rot">Ebook · 7 módulos + checklist</div>
+        <h1>Ordem Digital</h1>
+        <p class="subtitulo">Organize sua vida digital</p>
+        <p class="lead">Tire o caos da sua tela, do seu e-mail e da sua cabeça
+        em <strong>um fim de semana</strong>. Você não vai organizar a vida
+        inteira — vai organizar três coisas, com critério, e ficar com um
+        ritual de 10 minutos por semana que impede o caos de voltar.</p>
+        <ul class="provas">
+          <li><b>38</b> páginas</li>
+          <li><b>7</b> módulos</li>
+          <li>checklist de <b>8</b> folhas</li>
+          <li>1 fim de semana de reset</li>
+          <li>Garantia de <b>7 dias</b></li>
+        </ul>
+        <div class="cta">
+
+        </div>
+      </div>
+      <div>
+        <img class="arte" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjE0MTQiIHZpZXdCb3g9IjAgMCAxMDAwIDE0MTQiPg0KPGRlZnM+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iZnVuZG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTIxNjFBIi8+DQogICAgPHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiMxQjIxMjYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNTJEMzQiLz4NCiAgPC9saW5lYXJHcmFkaWVudD4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJhY2VudG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIi8+DQogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEU4QzlFIi8+DQogIDwvbGluZWFyR3JhZGllbnQ+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iYm9yZGEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMkQzRUUiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KICA8bGluZWFyR3JhZGllbnQgaWQ9ImhhbG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIiBzdG9wLW9wYWNpdHk9IjAuMTYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMkQzRUUiIHN0b3Atb3BhY2l0eT0iMCIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iMTQxNCIgZmlsbD0idXJsKCNmdW5kbykiLz4NCjxyZWN0IHg9IjUyIiB5PSI1MiIgd2lkdGg9Ijg5NiIgaGVpZ2h0PSIxMzEwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjYm9yZGEpIiBzdHJva2Utd2lkdGg9IjMiIHJ4PSIxNCIvPjx0ZXh0IHg9Ijk2IiB5PSIxNjgiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSI3MDAiIGxldHRlci1zcGFjaW5nPSI5IiBmaWxsPSIjOEE5N0EzIj5PUkdBTklaQcOHw4NPIERJR0lUQUwgUEVTU09BTDwvdGV4dD48dGV4dCB4PSI5NiIgeT0iNDIwIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzMiIgZm9udC13ZWlnaHQ9IjgwMCIgbGV0dGVyLXNwYWNpbmc9Ii0zIiBmaWxsPSIjRjRGN0Y5Ij5PUkRFTTwvdGV4dD48dGV4dCB4PSI5NiIgeT0iNTQ4IiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzMiIgZm9udC13ZWlnaHQ9IjIwMCIgbGV0dGVyLXNwYWNpbmc9IjYiIGZpbGw9InVybCgjYWNlbnRvKSI+RElHSVRBTDwvdGV4dD48cmVjdCB4PSI5NiIgeT0iNTk0IiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSJ1cmwoI2FjZW50bykiLz48dGV4dCB4PSI5NiIgeT0iNjc0IiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ0IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjRjRGN0Y5Ij5Pcmdhbml6ZSBzdWEgdmlkYSBkaWdpdGFsPC90ZXh0Pjx0ZXh0IHg9Ijk2IiB5PSI3MzQiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM4QTk3QTMiPlRpcmUgbyBjYW9zIGRhIHN1YSB0ZWxhLCBkbyBzZXUgZS1tYWlsPC90ZXh0Pjx0ZXh0IHg9Ijk2IiB5PSI3NzQiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI0MDAiIGZpbGw9IiM4QTk3QTMiPmUgZGEgc3VhIGNhYmXDp2EgZW0gdW0gZmltIGRlIHNlbWFuYTwvdGV4dD48cmVjdCB4PSIxMDQiIHk9IjgyMiIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTQgMTUyIDgzMSkiLz48cmVjdCB4PSIyMzYiIHk9IjgxMiIgd2lkdGg9Ijc0IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSg5IDI3MyA4MjEpIi8+PHJlY3QgeD0iMzQ4IiB5PSI4MzAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKC02IDQwOCA4MzkpIi8+PHJlY3QgeD0iNTAwIiB5PSI4MTQiIHdpZHRoPSI4NiIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoMTcgNTQzIDgyMykiLz48cmVjdCB4PSI2MjAiIHk9IjgyOCIgd2lkdGg9IjY4IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTEgNjU0IDgzNykiLz48cmVjdCB4PSI3MjAiIHk9IjgxMCIgd2lkdGg9IjEwNCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoNyA3NzIgODE5KSIvPjxyZWN0IHg9Ijg1MiIgeT0iODI2IiB3aWR0aD0iNTYiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKC0xOCA4ODAgODM1KSIvPjxyZWN0IHg9IjE1MCIgeT0iODYyIiB3aWR0aD0iNzAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKDEyIDE4NSA4NzEpIi8+PHJlY3QgeD0iMjU2IiB5PSI4NzIiIHdpZHRoPSIxMTAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKC04IDMxMSA4ODEpIi8+PHJlY3QgeD0iNDA0IiB5PSI4NTgiIHdpZHRoPSI4NCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoMTUgNDQ2IDg2NykiLz48cmVjdCB4PSI1MjAiIHk9Ijg3NCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTMgNTY4IDg4MykiLz48cmVjdCB4PSI2NTYiIHk9Ijg2NCIgd2lkdGg9IjY2IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSg2IDY4OSA4NzMpIi8+PHJlY3QgeD0iNzU2IiB5PSI4NzYiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTkgODAyIDg4NSkiLz48cmVjdCB4PSI4ODAiIHk9Ijg2MCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgxNCA5MDIgODY5KSIvPjxyZWN0IHg9Ijk2IiB5PSI5MTgiIHdpZHRoPSI4MDgiIGhlaWdodD0iNCIgcng9IjIiIGZpbGw9InVybCgjYWNlbnRvKSIgZmlsbC1vcGFjaXR5PSIwLjkiLz48cGF0aCBkPSJNNDg0LDkzNCBMNTAwLDk1MCBMNTE2LDkzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9Ijk2IiB5PSI5NzIiIHdpZHRoPSIyNTIiIGhlaWdodD0iNzQiIHJ4PSIxMCIgZmlsbD0iIzFCMjEyNiIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utb3BhY2l0eT0iMC4zOCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTYiIHk9Ijk4MCIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjEyMiIgeT0iOTk2IiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuNTUiLz48cmVjdCB4PSIxMjIiIHk9IjEwMTMiIHdpZHRoPSI4NSIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjMwIi8+PHBhdGggZD0iTTMxNSwxMDA5IGw2LDcgbDEyLC0xNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjM3NCIgeT0iOTcyIiB3aWR0aD0iMjUyIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIGZpbGw9IiMxQjIxMjYiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzgiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjM3NCIgeT0iOTgwIiB3aWR0aD0iNyIgaGVpZ2h0PSI1OCIgcng9IjMuNSIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+PHJlY3QgeD0iNDAwIiB5PSI5OTYiIHdpZHRoPSIxMzIiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4QTk3QTMiIGZpbGwtb3BhY2l0eT0iMC41NSIvPjxyZWN0IHg9IjQwMCIgeT0iMTAxMyIgd2lkdGg9Ijg1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNNTkzLDEwMDkgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iNjUyIiB5PSI5NzIiIHdpZHRoPSIyNTIiIGhlaWdodD0iNzQiIHJ4PSIxMCIgZmlsbD0iIzFCMjEyNiIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utb3BhY2l0eT0iMC4zOCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iNjUyIiB5PSI5ODAiIHdpZHRoPSI3IiBoZWlnaHQ9IjU4IiByeD0iMy41IiBmaWxsPSIjMjJEM0VFIiBmaWxsLW9wYWNpdHk9IjAuODUiLz48cmVjdCB4PSI2NzgiIHk9Ijk5NiIgd2lkdGg9IjEzMiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iNjc4IiB5PSIxMDEzIiB3aWR0aD0iODUiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4QTk3QTMiIGZpbGwtb3BhY2l0eT0iMC4zMCIvPjxwYXRoIGQ9Ik04NzEsMTAwOSBsNiw3IGwxMiwtMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cmVjdCB4PSI5NiIgeT0iMTA2NiIgd2lkdGg9IjI1MiIgaGVpZ2h0PSI3NCIgcng9IjEwIiBmaWxsPSIjMUIyMTI2IiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM4IiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSI5NiIgeT0iMTA3NCIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjEyMiIgeT0iMTA5MCIgd2lkdGg9IjEzMiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iMTIyIiB5PSIxMTA3IiB3aWR0aD0iODUiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4QTk3QTMiIGZpbGwtb3BhY2l0eT0iMC4zMCIvPjxwYXRoIGQ9Ik0zMTUsMTEwMyBsNiw3IGwxMiwtMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cmVjdCB4PSIzNzQiIHk9IjEwNjYiIHdpZHRoPSIyNTIiIGhlaWdodD0iNzQiIHJ4PSIxMCIgZmlsbD0iIzFCMjEyNiIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utb3BhY2l0eT0iMC4zOCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMzc0IiB5PSIxMDc0IiB3aWR0aD0iNyIgaGVpZ2h0PSI1OCIgcng9IjMuNSIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+PHJlY3QgeD0iNDAwIiB5PSIxMDkwIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuNTUiLz48cmVjdCB4PSI0MDAiIHk9IjExMDciIHdpZHRoPSI4NSIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjMwIi8+PHBhdGggZD0iTTU5MywxMTAzIGw2LDcgbDEyLC0xNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJEM0VFIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxyZWN0IHg9IjY1MiIgeT0iMTA2NiIgd2lkdGg9IjI1MiIgaGVpZ2h0PSI3NCIgcng9IjEwIiBmaWxsPSIjMUIyMTI2IiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM4IiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSI2NTIiIHk9IjEwNzQiIHdpZHRoPSI3IiBoZWlnaHQ9IjU4IiByeD0iMy41IiBmaWxsPSIjMjJEM0VFIiBmaWxsLW9wYWNpdHk9IjAuODUiLz48cmVjdCB4PSI2NzgiIHk9IjEwOTAiIHdpZHRoPSIxMzIiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiM4QTk3QTMiIGZpbGwtb3BhY2l0eT0iMC41NSIvPjxyZWN0IHg9IjY3OCIgeT0iMTEwNyIgd2lkdGg9Ijg1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNODcxLDExMDMgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iOTYiIHk9IjExNzYiIHdpZHRoPSI3ODAiIGhlaWdodD0iOTIiIHJ4PSIxMiIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjEwIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIxMzIiIHk9IjEyMzQiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMyMkQzRUUiPjEgZmltIGRlIHNlbWFuYSAgwrcgIDEwIG1pbiBwb3Igc2VtYW5hPC90ZXh0Pjx0ZXh0IHg9IjUwMC4wIiB5PSIxMzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM0IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMTQiIGZpbGw9IiMyNTJEMzQiPlNUU0NPUlA8L3RleHQ+DQo8L3N2Zz4=" width="1000" height="1414"
+             alt="Capa do eBook Ordem Digital, com o título Ordem Digital e o
+             subtítulo Organize sua vida digital">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="par" id="problema">
+  <div class="wrap">
+    <div class="rot">O problema</div>
+    <h2>Você já tentou organizar. Várias vezes.</h2>
+    <p class="lead">E concluiu, pela terceira vez, que não tem disciplina para
+    isso. O livro começa dizendo o contrário: <strong>é um problema de
+    projeto, não de personagem.</strong></p>
+    <div class="cards">
+    <div class="card">
+      <div class="n">1</div>
+      <h3>A pasta “2026”</h3>
+      <p>Você criou, moveu uns arquivos para dentro e ficou se sentindo bem por dois dias. Depois voltou tudo para a área de trabalho, porque na área de trabalho era mais rápido achar.</p>
+    </div>
+    <div class="card">
+      <div class="n">2</div>
+      <h3>A caixa de entrada</h3>
+      <p>Três mil mensagens e nenhuma regra: nem de entrada, nem de saída, nem de arquivamento. Você abre, olha, fecha, e abre de novo amanhã — com três mil e quarenta.</p>
+    </div>
+    <div class="card">
+      <div class="n">3</div>
+      <h3>O celular</h3>
+      <p>De 80 a 200 notificações por dia para a maioria das pessoas. Cada uma cobra o tempo de reconstruir exatamente o que você estava fazendo.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="programa">
+  <div class="wrap">
+    <div class="rot">O programa</div>
+    <h2>O que está dentro, módulo por módulo</h2>
+    <p class="lead">Os Módulos 1 a 3 são o reset — um fim de semana. Os 4 a 6
+    são profundidade. O Módulo 7 é o que se repete para sempre.</p>
+    <div class="mod">
+      <div><div class="num">01</div><h3>Módulo 1</h3><p class="sub">Por que “organizar tudo” sempre falha</p></div>
+      <ul><li>A armadilha do “dia da organização”</li><li>Os quatro erros que se repetem</li><li>O critério único que decide tudo</li><li>O escopo travado deste livro: 3 superfícies</li><li>Os 3 critérios de um sistema que dura</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">02</div><h3>Módulo 2</h3><p class="sub">O reset de um fim de semana</p></div>
+      <ul><li>As 5 regras do reset, antes de começar</li><li>Bloco 1 — computador, 90 minutos</li><li>Bloco 2 — a nuvem, 90 minutos</li><li>A regra de nome e a regra de entrada</li><li>O que você faz com o que sobrou</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">03</div><h3>Módulo 3</h3><p class="sub">O e-mail que você consegue zerar em 5 minutos</p></div>
+      <ul><li>Por que o e-mail vira uma montanha</li><li>A regra dos 3 botões</li><li>A estrutura mínima de pastas</li><li>Regras automáticas: o que faz você ganhar tempo</li><li>Como zerar a caixa de entrada em 5 minutos</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">04</div><h3>Módulo 4</h3><p class="sub">O celular que para de roubar suas horas</p></div>
+      <ul><li>A mecânica da interrupção (e a reconstrução de contexto)</li><li>3 configurações que resolvem 80% do problema</li><li>O que fazer com o “vou olhar rápido”</li><li>Manutenção do celular: 5 minutos, uma vez por mês</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">05</div><h3>Módulo 5</h3><p class="sub">Automação sem saber programar</p></div>
+      <ul><li>O princípio antes da ferramenta</li><li>As 3 famílias de ferramenta e o que cada uma resolve</li><li>As 12 automações que valem a pena</li><li>A receita de 20 minutos para montar qualquer uma</li><li>O que você NUNCA deve automatizar</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">06</div><h3>Módulo 6</h3><p class="sub">O que a IA faz, o que ela não faz, e onde atrapalha</p></div>
+      <ul><li>A regra de ouro da IA</li><li>A fronteira em 3 perguntas</li><li>Os 5 usos onde a IA entrega de verdade</li><li>Os 4 usos onde ela atrapalha</li><li>Os 3 erros de uso que custam mais caro</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">07</div><h3>Módulo 7</h3><p class="sub">A manutenção de 10 minutos</p></div>
+      <ul><li>Por que este módulo vem por último (e é o primeiro)</li><li>O ritual de domingo: 10 minutos</li><li>O que você olha de mês em mês</li><li>O quadro do domingo, para imprimir e preencher</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">08</div><h3>Checklist</h3><p class="sub">8 folhas de execução, para marcar</p></div>
+      <ul><li>Uma folha por módulo, frente e verso</li><li>Vem no fim do eBook e também em arquivo próprio</li><li>Feita para ficar aberta ao lado do teclado</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="par">
+  <div class="wrap">
+    <div class="rot">O que vem junto</div>
+    <h2>O que chega, e quando chega</h2>
+    <p class="lead">São dois arquivos, e os dois são liberados juntos. O
+    checklist existe em dois lugares de propósito: no fim do eBook, para ler
+    na tela, e em arquivo próprio, para ficar aberto ao lado do teclado.</p>
+    <div class="cards etapas">
+      <div class="card etapa">
+        <div class="quando">Assim que o pagamento confirmar</div>
+        <h3>Na hora da compra</h3>
+        <p>o livro inteiro e o checklist para imprimir</p>
+        <ul class="itens"><li><b>Ordem_Digital.pdf</b><span>o eBook, 38 páginas, 7 módulos + checklist no fim</span></li><li><b>Ordem_Digital_Checklist.pdf</b><span>as mesmas 8 folhas em arquivo próprio, para imprimir</span></li></ul>
+      </div>
+    </div>
+    <p class="nota">Não existe etapa adiada nem conteúdo escondido: o que está
+    descrito aqui é exatamente o que você baixa. O que não está descrito aqui
+    não existe — e é melhor assim.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rot">Antes de comprar</div>
+    <h2>Este eBook é para você se…</h2>
+    <div class="dos">
+      <div class="lado sim">
+        <h3>É para você se</h3>
+        <ul>
+          <li>você já tentou organizar várias vezes e sempre voltou ao mesmo
+              ponto — e a culpa ficou com você</li>
+          <li>a caixa de entrada tem mais mensagens do que você consegue ler,
+              e não existe regra nenhuma sobre elas</li>
+          <li>o celular te interrompe o dia inteiro e você não sabe de onde
+              vêm a maior parte das notificações</li>
+          <li>você quer resolver num fim de semana, não num plano de 90 dias</li>
+          <li>quer um ritual de 10 minutos por semana que segura o resultado
+              — não uma promessa de que nunca mais vai falhar</li>
+        </ul>
+      </div>
+      <div class="lado nao">
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>você procura agenda, finanças ou guarda-roupa — este livro é
+              travado em 3 superfícies e diz isso por escrito, não é para
+              você</li>
+          <li>quer aula ao vivo, mentoria, comunidade ou certificado — nada
+              disso existe no produto</li>
+          <li>quer aprender a programar — este livro é justamente para quem
+              não programa</li>
+          <li>espera que a IA decida por você — o Módulo 6 ensina o contrário
+              e é um dos mais duros do livro</li>
+          <li>precisa de licença para um time inteiro — a licença é pessoal e
+              ainda não existe opção de equipe</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="par" id="preco">
+  <div class="wrap">
+    <div class="rot">O investimento</div>
+    <h2>Pagamento único. Sem assinatura.</h2>
+    <div class="preco">
+      <div class="rot claro">Um produto, dois arquivos</div>
+      <p class="valor">
+        <span class="de">de R$ 29,90</span>
+        <span class="por"><small>R$</small>14,99</span>
+      </p>
+      <p class="detalhe">Uma vez. Sem cobrança recorrente, sem mensalidade,
+      sem taxa de renovação.</p>
+      <p class="sem-checkout">Os botões de compra entram nesta página assim que o checkout estiver aberto.</p>
+      <ul>
+        <li>38 páginas · 7 módulos · sumário com links</li>
+        <li>Checklist de 8 folhas, no fim do eBook e em arquivo próprio</li>
+        <li>Um fim de semana de reset, 10 minutos por semana de manutenção</li>
+        <li>Arquivos liberados assim que o pagamento confirmar</li>
+        <li>Edição de 2026, sem cobrança de assinatura</li>
+      </ul>
+      <div class="garantia">
+        <span>Garantia de 7 dias — se não servir, é só pedir o reembolso.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="rot">Dúvidas</div>
+    <h2>Perguntas que aparecem antes de pagar</h2>
+    <div class="faq">
+      <details>
+        <summary>O que eu recebo, e quando?</summary>
+        <div class="resp"><p>A entrega é em 1 etapa e você é avisado de cada uma: <b>Ordem_Digital.pdf e Ordem_Digital_Checklist.pdf</b>, assim que o pagamento confirmar. Não existe etapa adiada: o checklist vem junto porque é ele que você marca enquanto executa o reset — checklist que chega depois não cumpre função nenhuma.</p></div>
+      </details>
+      <details>
+        <summary>Quanto tempo leva para isso funcionar?</summary>
+        <div class="resp"><p>O livro é construído em dois tempos: <b>o reset</b> (Módulos 1 a 3) em <b>um fim de semana</b>, em dois blocos de 90 minutos, e <b>a manutenção</b> (Módulo 7) em <b>10 minutos por semana</b>, todo domingo. Você não precisa terminar o livro inteiro: quem faz só o Módulo 1 e o Módulo 7 já teve ganho — o próprio livro diz isso.</p></div>
+      </details>
+      <details>
+        <summary>Preciso instalar alguma coisa?</summary>
+        <div class="resp"><p>Para ler, não: o PDF abre no navegador. Para executar, você usa o seu computador, o seu celular e as pastas que já existem nele. As automações do Módulo 5 usam ferramentas nomeadas uma a uma no livro, com o plano gratuito indicado — e o livro diz em que ponto o plano pago começa a ser necessário.</p></div>
+      </details>
+      <details>
+        <summary>Funciona no Mac, no Android e no iPhone?</summary>
+        <div class="resp"><p>Os passos a passo foram escritos para <b>Windows, Android e iPhone</b>: os caminhos de celular aparecem para Android e iPhone lado a lado. No Mac a lógica é a mesma, mas o livro não traz os caminhos específicos do Mac — e preferimos dizer isso a fingir que traz.</p></div>
+      </details>
+      <details>
+        <summary>Sou uma bagunça organizada. Isso serve para mim?</summary>
+        <div class="resp"><p>É para quem a página inteira é sobre. O livro não começa pedindo para você organizar a vida: ele começa explicando por que os seus três anteriores “dia da organização” falharam, e por que a falha não era de disciplina. O escopo é travado de propósito em <b>arquivos, e-mail e celular</b> — agenda e financeiro não são assunto deste livro.</p></div>
+      </details>
+      <details>
+        <summary>Isso aqui é um curso com aulas?</summary>
+        <div class="resp"><p>Não. É um eBook em PDF, com checklist. Não tem aula gravada, não tem ao vivo, não tem turma, não tem certificado — não existe nada disso no produto. O que tem é passo a passo escrito, exercício de 5 a 20 minutos em cada capítulo e 8 folhas de checklist para marcar o que executou.</p></div>
+      </details>
+      <details>
+        <summary>O livro ensina a programar?</summary>
+        <div class="resp"><p>Não. O Módulo 5 se chama “Automação sem saber programar” justamente porque programar não é pré-requisito: as 12 automações são montadas em ferramentas de arrastar e soltar. Se você quer escrever código, este não é o livro.</p></div>
+      </details>
+      <details>
+        <summary>E a IA? O livro ensina a usar uma ferramenta específica?</summary>
+        <div class="resp"><p>O Módulo 6 não é manual de ferramenta, é sobre <b>fronteira</b>: o que a IA faz bem, o que ela faz mal e os quatro usos em que ela ainda atrapalha. Ferramenta muda de versão todo mês; o critério com que você decide o que entregar para ela não muda — é esse que o livro ensina.</p></div>
+      </details>
+      <details>
+        <summary>Posso comprar para a minha equipe?</summary>
+        <div class="resp"><p>A licença é <b>pessoal: uma cópia por pessoa</b>, e uma cópia não cobre um time. Este produto ainda não tem opção de licença de equipe pronta — e não vamos fingir que tem. Fale com a gente dentro da plataforma onde você comprou e conta o que você precisa.</p></div>
+      </details>
+      <details>
+        <summary>Posso revender, postar o PDF ou usar em curso pago?</summary>
+        <div class="resp"><p>Não. A compra dá direito de uso pessoal e leitura. Compartilhar o PDF — inclusive dentro da sua empresa, em grupo de WhatsApp ou em curso pago — é uso indevido.</p></div>
+      </details>
+      <details>
+        <summary>Como funciona a garantia?</summary>
+        <div class="resp"><p>7 dias, conforme o artigo 49 do Código de Defesa do Consumidor, que trata do direito de arrependimento em compra online. O pedido é feito dentro da plataforma onde você comprou e o reembolso sai em até 7 dias, pelo mesmo meio de pagamento. Você não precisa explicar por que desistiu.</p></div>
+      </details>
+      <details>
+        <summary>Em quanto tempo eu recebo?</summary>
+        <div class="resp"><p>Assim que o pagamento é confirmado: os arquivos são liberados automaticamente para o e-mail informado na compra, e o aviso chega lá. Confira a caixa de spam e a pasta de promoções.</p></div>
+      </details>
+      <details>
+        <summary>Vocês vão atualizar o livro?</summary>
+        <div class="resp"><p>Esta é a edição de 2026, e não prometemos atualização vitalícia. É melhor assim: a compra é de uma edição específica, e qualquer revisão futura entra como produto novo, com preço próprio, avisando antes quem já comprou. O que não fazemos é dizer que sai de graça algo que ainda não foi escrito.</p></div>
+      </details>
+    </div>
+    <p class="nota">Dúvida que não está aqui? Abra o seu pedido dentro da plataforma onde você comprou e
+    fale com a gente por lá.</p>
+  </div>
+</section>
+
+<section class="fim">
+  <div class="wrap">
+    <img class="arte" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEyMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEyMDAiPg0KPGRlZnM+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iZnVuZG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTIxNjFBIi8+DQogICAgPHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiMxQjIxMjYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNTJEMzQiLz4NCiAgPC9saW5lYXJHcmFkaWVudD4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJhY2VudG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIi8+DQogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMEU4QzlFIi8+DQogIDwvbGluZWFyR3JhZGllbnQ+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iYm9yZGEiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMkQzRUUiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KICA8bGluZWFyR3JhZGllbnQgaWQ9ImhhbG8iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjJEM0VFIiBzdG9wLW9wYWNpdHk9IjAuMTYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMkQzRUUiIHN0b3Atb3BhY2l0eT0iMCIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTIwMCIgZmlsbD0idXJsKCNmdW5kbykiLz4NCjxlbGxpcHNlIGN4PSI4MDAiIGN5PSI1MjAiIHJ4PSI0NzAiIHJ5PSI0MzAiIGZpbGw9InVybCgjaGFsbykiLz48ZWxsaXBzZSBjeD0iODAwIiBjeT0iOTgwIiByeD0iNDQwIiByeT0iNzAiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC4xMCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU1OSwyMTApIj48cGF0aCBkPSJNMCw2MCBMNDIwLC0xNTAgTDQyMCw1NTAgTDAsNzYwIFoiIGZpbGw9InVybCgjZnVuZG8pIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MCIgeT0iMjQwIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijc2IiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjRjRGN0Y5IiB0cmFuc2Zvcm09InNrZXdZKC0yNikiPk9SREVNPC90ZXh0Pjx0ZXh0IHg9IjQwIiB5PSIzMzUiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzYiIGZvbnQtd2VpZ2h0PSIyMDAiIGZpbGw9IiMyMkQzRUUiIHRyYW5zZm9ybT0ic2tld1koLTI2KSI+RElHSVRBTDwvdGV4dD48dGV4dCB4PSI0MCIgeT0iNDIwIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjOEE5N0EzIiB0cmFuc2Zvcm09InNrZXdZKC0yNikiPk9yZ2FuaXplIHN1YSB2aWRhIGRpZ2l0YWw8L3RleHQ+PGcgdHJhbnNmb3JtPSJza2V3WSgtMjYpIj48cmVjdCB4PSI0MCIgeT0iNDcwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjM0IiByeD0iOCIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjEwIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxyZWN0IHg9IjQ4IiB5PSI0NzciIHdpZHRoPSI2IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+PHJlY3QgeD0iNjYiIHk9IjQ4MyIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjUiLz48L2c+PGcgdHJhbnNmb3JtPSJza2V3WSgtMjYpIj48cmVjdCB4PSI0MCIgeT0iNTE2IiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjM0IiByeD0iOCIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjEwIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxyZWN0IHg9IjQ4IiB5PSI1MjMiIHdpZHRoPSI2IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+PHJlY3QgeD0iNjYiIHk9IjUyOSIgd2lkdGg9IjEyNCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjUiLz48L2c+PGcgdHJhbnNmb3JtPSJza2V3WSgtMjYpIj48cmVjdCB4PSI0MCIgeT0iNTYyIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjM0IiByeD0iOCIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjEwIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1IiBzdHJva2Utd2lkdGg9IjEuNSIvPjxyZWN0IHg9IjQ4IiB5PSI1NjkiIHdpZHRoPSI2IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzIyRDNFRSIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+PHJlY3QgeD0iNjYiIHk9IjU3NSIgd2lkdGg9Ijk4IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuNSIvPjwvZz48cGF0aCBkPSJNNDIwLC0xNTAgTDQ3MCwtMTA2IEw0NzAsNTk0IEw0MjAsNTUwIFoiIGZpbGw9IiNGNEY3RjkiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxwYXRoIGQ9Ik00NzAsLTEwNiBMNDgyLC0xMTQgTDQ4Miw1ODYgTDQ3MCw1OTQgWiIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjYiLz48L2c+PHJlY3QgeD0iMTUwIiB5PSIzNjAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjIiIHJ4PSIxMSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTYgMjEwIDM3MSkiLz48cmVjdCB4PSIzMDAiIHk9IjMwMCIgd2lkdGg9Ijk2IiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoMTIgMzQ4IDMxMSkiLz48cmVjdCB4PSIxMjAiIHk9IjQ2MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyMiIgcng9IjExIiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKDkgMTk1IDQ3MSkiLz48cmVjdCB4PSIzMjAiIHk9IjUyMCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyMiIgcng9IjExIiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKC0xMyAzNzUgNTMxKSIvPjxyZWN0IHg9IjE3MCIgeT0iNjIwIiB3aWR0aD0iODgiIGhlaWdodD0iMjIiIHJ4PSIxMSIgZmlsbD0iIzJCMzQzQyIgc3Ryb2tlPSIjOEE5N0EzIiBzdHJva2Utb3BhY2l0eT0iMC4zMyIgc3Ryb2tlLXdpZHRoPSIyIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSAyMTQgNjMxKSIvPjxyZWN0IHg9IjMwMCIgeT0iNzAwIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiMyQjM0M0MiIHN0cm9rZT0iIzhBOTdBMyIgc3Ryb2tlLW9wYWNpdHk9IjAuMzMiIHN0cm9rZS13aWR0aD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTggMzY2IDcxMSkiLz48cmVjdCB4PSIxNDAiIHk9Ijc4MCIgd2lkdGg9IjEwNCIgaGVpZ2h0PSIyMiIgcng9IjExIiBmaWxsPSIjMkIzNDNDIiBzdHJva2U9IiM4QTk3QTMiIHN0cm9rZS1vcGFjaXR5PSIwLjMzIiBzdHJva2Utd2lkdGg9IjIiIHRyYW5zZm9ybT0icm90YXRlKDExIDE5MiA3OTEpIi8+PHJlY3QgeD0iMTEzMCIgeT0iMzMwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIGZpbGw9IiMxQjIxMjYiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzgiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjExMzAiIHk9IjMzOCIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjExNTYiIHk9IjM1NCIgd2lkdGg9IjE5NiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iMTE1NiIgeT0iMzcxIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNMTQzNywzNjcgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iMTEzMCIgeT0iNDM4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIGZpbGw9IiMxQjIxMjYiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzgiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjExMzAiIHk9IjQ0NiIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjExNTYiIHk9IjQ2MiIgd2lkdGg9IjE5NiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iMTE1NiIgeT0iNDc5IiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNMTQzNyw0NzUgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iMTEzMCIgeT0iNTQ2IiB3aWR0aD0iMzQwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIGZpbGw9IiMxQjIxMjYiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzgiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjExMzAiIHk9IjU1NCIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjExNTYiIHk9IjU3MCIgd2lkdGg9IjE5NiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iMTE1NiIgeT0iNTg3IiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNMTQzNyw1ODMgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHJlY3QgeD0iMTEzMCIgeT0iNjU0IiB3aWR0aD0iMzQwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIGZpbGw9IiMxQjIxMjYiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLW9wYWNpdHk9IjAuMzgiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjExMzAiIHk9IjY2MiIgd2lkdGg9IjciIGhlaWdodD0iNTgiIHJ4PSIzLjUiIGZpbGw9IiMyMkQzRUUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPjxyZWN0IHg9IjExNTYiIHk9IjY3OCIgd2lkdGg9IjE5NiIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhBOTdBMyIgZmlsbC1vcGFjaXR5PSIwLjU1Ii8+PHJlY3QgeD0iMTE1NiIgeT0iNjk1IiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjOEE5N0EzIiBmaWxsLW9wYWNpdHk9IjAuMzAiLz48cGF0aCBkPSJNMTQzNyw2OTEgbDYsNyBsMTIsLTE1IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMkQzRUUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHRleHQgeD0iODAwIiB5PSIxMDkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjOEE5N0EzIj4xIGZpbSBkZSBzZW1hbmEgIMK3ICAxMCBtaW4gcG9yIHNlbWFuYTwvdGV4dD4NCjwvc3ZnPg==" width="1600" height="1200"
+         alt="O eBook Ordem Digital em perspectiva, com a capa e o resumo do
+         que vem no download">
+    <h2>Um fim de semana para organizar. Dez minutos por semana para manter.</h2>
+    <p class="lead" style="max-width:36em;margin:0 auto 6px">7
+    módulos, 38 páginas e checklist de 8 folhas. de R$ 29,90 por R$ 14,99,
+    garantia de 7 dias, arquivos liberados assim que o pagamento confirmar.</p>
+    <div class="cta">
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p><strong>Ordem Digital</strong> · Organize sua vida digital ·
+    STSCORP · edição de 2026.</p>
+    <p>Licença pessoal de leitura. Não é permitido revender, redistribuir ou
+    postar os arquivos. Compra sujeita à garantia legal de 7 dias do artigo 49
+    do Código de Defesa do Consumidor. O reembolso sai em até 7 dias, pelo
+    mesmo meio de pagamento.</p>
+    <p>Atendimento: dentro da plataforma onde você comprou.</p>
+  </div>
+</footer>
+
+</body>
+</html>
