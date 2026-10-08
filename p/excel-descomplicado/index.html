@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excel Descomplicado — 5 módulos, 39 páginas, 6 planilhas prontas</title>
+<meta name="description" content="Do zero operacional a planilhas limpas, automatizadas e funcionais. 5 módulos, 39 páginas, 6 planilhas .xlsx prontas e bônus. Pagamento único, garantia de 7 dias.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://excel-descomplicado.netlify.app/p/excel-descomplicado/"
+<meta property="og:site_name" content="STSCORP">
+<meta property="og:title" content="Excel Descomplicado — do zero ao painel financeiro">
+<meta property="og:description" content="5 módulos, 39 páginas, 6 planilhas prontas. R$ 29,90, garantia de 7 dias.">
+<meta property="og:image" content="https://excel-descomplicado.netlify.app/p/excel-descomplicado/banner_social.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:,">
+<style>
+:root{
+  --verde:#217346; --verde-esc:#185C37; --tinta:#1A2332;
+  --cinza:#5A6472; --cinza-claro:#8A93A0; --branco:#fff; --folha:#F7F8FA;
+  --erro:#9C2B20; --erro-fundo:#FDECEA;
+  --borda:#E3E7EC;
+  --max:1080px;
+  --fonte:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--fonte);color:var(--tinta);background:var(--branco);
+  line-height:1.6;font-size:17px}
+a{color:var(--verde)}
+h1,h2,h3{line-height:1.18;letter-spacing:-.015em;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5.2vw,3.3rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.4vw,2.15rem);font-weight:800}
+h3{font-size:1.13rem;font-weight:700;margin-bottom:.35em}
+p{margin:0 0 1em}
+code{font-family:Consolas,"Cascadia Mono",monospace;background:var(--folha);
+  border:1px solid var(--borda);border-radius:4px;padding:.08em .35em;
+  font-size:.92em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+section.par{background:var(--folha);border-top:1px solid var(--borda);
+  border-bottom:1px solid var(--borda)}
+.rot{color:var(--verde);font-size:.79rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;margin-bottom:.6em}
+.lead{font-size:1.1rem;color:var(--cinza)}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;
+  gap:16px;height:62px}
+.marca{font-weight:800;letter-spacing:.02em;font-size:1.02rem}
+.marca span{color:var(--verde)}
+
+/* botao */
+.btn{display:inline-block;background:var(--verde);color:#fff !important;
+  text-decoration:none;font-weight:700;padding:16px 30px;border-radius:10px;
+  border:0;cursor:pointer;font-size:1.03rem;font-family:var(--fonte);
+  box-shadow:0 2px 0 var(--verde-esc);transition:background .15s}
+.btn:hover{background:var(--verde-esc)}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--verde) !important;
+  box-shadow:inset 0 0 0 2px var(--verde);padding:14px 26px}
+.btn.ghost:hover{background:#EAF4EE}
+.btn.g-min{font-size:.9rem;padding:9px 18px;border-radius:8px}
+.cta{text-align:center;margin-top:30px}
+
+/* hero */
+.hero{padding:56px 0 68px;background:
+  linear-gradient(180deg,#fff 0%,var(--folha) 100%)}
+.hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;
+  align-items:center}
+.hero p.lead{font-size:1.14rem;max-width:34em}
+.hero .arte{width:100%;max-width:360px;margin:0 auto;display:block;
+  border-radius:8px;box-shadow:0 22px 48px rgba(26,35,50,.16)}
+.provas{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;
+  margin:22px 0 0}
+.provas li{background:#fff;border:1px solid var(--borda);border-radius:999px;
+  padding:7px 15px;font-size:.87rem;font-weight:600;color:var(--cinza)}
+.provas b{color:var(--verde)}
+
+/* cartoes */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.card{background:#fff;border:1px solid var(--borda);border-radius:14px;
+  padding:26px 24px}
+.card .n{display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:9px;background:#EAF4EE;color:var(--verde);
+  font-weight:800;font-size:.95rem;margin-bottom:12px}
+.card p{color:var(--cinza);font-size:.96rem;margin:0}
+.cards.etapas{grid-template-columns:repeat(2,1fr)}
+.card.etapa{position:relative;padding-top:22px}
+.card.etapa .quando{display:inline-block;background:var(--verde);color:#fff;
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.card.etapa ul.itens{list-style:none;margin:12px 0 0;padding:0}
+.card.etapa ul.itens li{border-top:1px solid var(--borda);padding:8px 0 0;
+  margin-top:8px}
+.card.etapa ul.itens li:first-child{border-top:0;padding-top:0;margin-top:0}
+.card.etapa ul.itens b{display:block;font-family:Consolas,monospace;
+  font-size:.79rem;color:var(--tinta);font-weight:600}
+.card.etapa ul.itens span{display:block;font-size:.92rem;color:var(--cinza);
+  margin-top:2px}
+p.nota{max-width:44em;margin:20px auto 0;color:var(--cinza);font-size:.95rem;
+  text-align:center}
+.card .arq{font-family:Consolas,monospace;font-size:.79rem;color:var(--cinza-claro);
+  word-break:break-all}
+
+/* modulos */
+.mod{border-top:1px solid var(--borda);padding:26px 0;display:grid;
+  grid-template-columns:210px 1fr;gap:30px}
+.mod:last-child{border-bottom:1px solid var(--borda)}
+.mod .num{font-family:Consolas,monospace;color:var(--verde);font-weight:700;
+  font-size:.9rem;letter-spacing:.06em}
+.mod h3{font-size:1.22rem;margin:.15em 0 .1em}
+.mod .sub{color:var(--cinza);font-size:.94rem;margin:0 0 .6em}
+.mod ul{margin:0;padding-left:20px;color:var(--cinza);font-size:.95rem;
+  columns:2;column-gap:34px}
+.mod li{margin-bottom:.22em;break-inside:avoid}
+.mod li::marker{color:var(--verde)}
+
+/* dois lados */
+.dois{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.lado{border-radius:14px;padding:28px 26px;border:1px solid var(--borda)}
+.lado.sim{background:#F1F8F3;border-color:#CDE5D6}
+.lado.nao{background:var(--erro-fundo);border-color:#F0CFCB}
+.lado h3{font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase}
+.lado.sim h3{color:var(--verde-esc)}
+.lado.nao h3{color:var(--erro)}
+.lado ul{margin:0;padding-left:20px;font-size:.95rem}
+.lado li{margin-bottom:.35em}
+
+/* preco */
+.preco{background:linear-gradient(165deg,var(--verde) 0%,var(--verde-esc) 100%);
+  color:#fff;border-radius:20px;padding:44px 40px;max-width:620px;
+  margin:0 auto;text-align:center;box-shadow:0 20px 44px rgba(24,92,55,.24)}
+.preco .rot{color:rgba(255,255,255,.72)}
+.preco .valor{font-size:3.6rem;font-weight:800;line-height:1;margin:.1em 0 .15em;
+  letter-spacing:-.03em}
+.preco .valor small{font-size:1.5rem;font-weight:600;vertical-align:.55em;
+  margin-right:.12em;opacity:.85}
+.preco .detalhe{color:rgba(255,255,255,.86);margin:0 0 22px}
+.preco .btn{background:#fff;color:var(--verde-esc) !important;box-shadow:none;
+  font-size:1.1rem;padding:17px 34px}
+.preco .btn:hover{background:#EAF4EE}
+.preco ul{list-style:none;padding:0;margin:24px 0 0;text-align:left;
+  display:inline-block;color:rgba(255,255,255,.92);font-size:.96rem}
+.preco ul li{padding-left:26px;position:relative;margin-bottom:.4em}
+.preco ul li::before{content:"\2713";position:absolute;left:0;font-weight:800}
+.garantia{display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:22px;font-size:.93rem;color:rgba(255,255,255,.8)}
+
+/* faq */
+.faq details{border:1px solid var(--borda);border-radius:11px;background:#fff;
+  margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:17px 20px;font-weight:700;font-size:1.01rem;
+  list-style:none;position:relative;padding-right:52px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;
+  transform:translateY(-50%);font-size:1.35rem;font-weight:400;color:var(--verde);
+  line-height:1}
+.faq details[open] summary::after{content:"\2013"}
+.faq details[open] summary{border-bottom:1px solid var(--borda)}
+.faq .resp{padding:16px 20px 18px;color:var(--cinza);font-size:.97rem;margin:0}
+.faq .resp p:last-child{margin-bottom:0}
+
+/* final + rodape */
+.fim{text-align:center;background:linear-gradient(180deg,var(--folha),#fff)}
+.fim .arte{width:100%;max-width:820px;margin:0 auto 34px;display:block;
+  border-radius:12px;box-shadow:0 20px 44px rgba(26,35,50,.14)}
+.rodape{border-top:1px solid var(--borda);padding:34px 0;font-size:.89rem;
+  color:var(--cinza-claro);background:var(--folha)}
+.rodape a{color:var(--cinza)}
+
+@media (max-width:880px){
+  .hero .grid{grid-template-columns:1fr;gap:34px}
+  .hero .arte{max-width:290px}
+  .cards,.dos,.cards.etapas{grid-template-columns:1fr}
+  .mod{grid-template-columns:1fr;gap:8px}
+  .mod ul{columns:1}
+  .preco{padding:34px 24px}
+  .preco .valor{font-size:2.9rem}
+  section{padding:48px 0}
+}
+@media print{
+  .topo,.cta,.fim .btn{display:none}
+  body{font-size:11pt}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="marca">Excel <span>Descomplicado</span></div>
+    <a class="btn g-min" href="https://pay.kiwify.com.br/S9uVHFb">Quero começar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="rot">Ebook · Módulos 1 ao 5</div>
+        <h1>Excel Descomplicado</h1>
+        <p class="lead">Do zero operacional a planilhas limpas, automatizadas e
+        funcionais em 7 dias. Você não vai aprender a <em>usar</em> o Excel — vai
+        aprender o jeito de pensar que faz o Excel trabalhar por você.</p>
+        <ul class="provas">
+          <li><b>39</b> páginas</li>
+          <li><b>5</b> módulos</li>
+          <li><b>6</b> planilhas .xlsx</li>
+          <li><b>37</b> blocos de fórmula comentados</li>
+          <li>Garantia de <b>7 dias</b></li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="https://pay.kiwify.com.br/S9uVHFb">Quero aprender Excel de verdade</a>
+        </div>
+      </div>
+      <div>
+        <img class="arte" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxNDE0IiB2aWV3Qm94PSIwIDAgMTAwMCAxNDE0IiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idCBkIj4NCjx0aXRsZSBpZD0idCI+RXhjZWwgRGVzY29tcGxpY2FkbyAtIGNhcGE8L3RpdGxlPg0KPGRlc2MgaWQ9ImQiPkFydGUgZGUgY2FwYSBkbyBlQm9vayBFeGNlbCBEZXNjb21wbGljYWRvLCBmdW5kbyB2ZXJkZSwgNSBtw7NkdWxvcywgNiBwbGFuaWxoYXMgcHJvbnRhcy48L2Rlc2M+DQo8ZGVmcz4NCiAgPGZpbHRlciBpZD0ic29tYnJhIiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNjAlIj4NCiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyNiIvPg0KICA8L2ZpbHRlcj4NCiAgPGZpbHRlciBpZD0ic29tYnJhX2ZvcnRlIiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNjAlIj4NCiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0NCIvPg0KICA8L2ZpbHRlcj4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJndmVyZGUiIHgxPSIwIiB5MT0iMCIgeDI9IjAuMzUiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMTczNDYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxODVDMzciLz4NCiAgPC9saW5lYXJHcmFkaWVudD4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJnY2FwYSIgeDE9IjAiIHkxPSIwIiB4Mj0iMC42IiB5Mj0iMSI+DQogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMkE4QjU3Ii8+DQogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTg1QzM3Ii8+DQogIDwvbGluZWFyR3JhZGllbnQ+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ2xpdnJvIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+DQogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNDIiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMDAiIGhlaWdodD0iMTQxNCIgZmlsbD0iI0Y3RjhGQSIvPg0KPGVsbGlwc2UgY3g9IjUwMCIgY3k9IjEzNDgiIHJ4PSIzOTUiIHJ5PSIzNCIgZmlsbD0iIzFBMjMzMiIgb3BhY2l0eT0iMC4zMCIgZmlsdGVyPSJ1cmwoI3NvbWJyYSkiLz4NCjxyZWN0IHg9IjcwIiB5PSI1NiIgd2lkdGg9Ijg2MCIgaGVpZ2h0PSIxMjc0IiBmaWxsPSIjRjdGOEZBIiByeD0iNiIgdHJhbnNmb3JtPSJyb3RhdGUoLTIgNTAwIDcwNykiLz4NCjxnIHRyYW5zZm9ybT0ncm90YXRlKC0yIDUwMCA3MDcpJz4NCjxyZWN0IHg9IjcwIiB5PSI3MCIgd2lkdGg9Ijg2MCIgaGVpZ2h0PSIxMjc0IiBmaWxsPSJ1cmwoI2djYXBhKSIvPg0KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAsNzApIHNjYWxlKDAuODYpIj4NCjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjE0MTQiIGZpbGw9InVybCgjZ2NhcGEpIi8+DQo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxMCIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iMC4yMiIvPg0KPGxpbmUgeDE9IjE0MiIgeTE9IjAiIHgyPSIxNDIiIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjI4NSIgeTE9IjAiIHgyPSIyODUiIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjQyOCIgeTE9IjAiIHgyPSI0MjgiIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjU3MSIgeTE9IjAiIHgyPSI1NzEiIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjcxNCIgeTE9IjAiIHgyPSI3MTQiIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9Ijg1NyIgeTE9IjAiIHgyPSI4NTciIHkyPSIxNDE0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSIxNDEiIHgyPSIxMDAwIiB5Mj0iMTQxIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSIyODIiIHgyPSIxMDAwIiB5Mj0iMjgyIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSI0MjQiIHgyPSIxMDAwIiB5Mj0iNDI0IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSI1NjUiIHgyPSIxMDAwIiB5Mj0iNTY1IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSI3MDciIHgyPSIxMDAwIiB5Mj0iNzA3IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSI4NDgiIHgyPSIxMDAwIiB5Mj0iODQ4IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSI5ODkiIHgyPSIxMDAwIiB5Mj0iOTg5IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4wNyIvPg0KPGxpbmUgeDE9IjAiIHkxPSIxMTMxIiB4Mj0iMTAwMCIgeTI9IjExMzEiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjA3Ii8+DQo8bGluZSB4MT0iMCIgeTE9IjEyNzIiIHgyPSIxMDAwIiB5Mj0iMTI3MiIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMDciLz4NCjx0ZXh0IHg9IjkwIiB5PSIyMTAiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiNGRkZGRkYiIGZvbnQtd2VpZ2h0PSI2MDAiIGxldHRlci1zcGFjaW5nPSI0Ij5FQk9PSyDCtyBNw5NEVUxPUyAxIEFPIDU8L3RleHQ+DQo8dGV4dCB4PSI5MCIgeT0iNDcwIiBmb250LWZhbWlseT0iU2Vnb2UgVUkgQmxhY2ssIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCBCbGFjaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTY4IiBmaWxsPSIjRkZGRkZGIiBmb250LXdlaWdodD0iOTAwIj5FWENFTDwvdGV4dD4NCjx0ZXh0IHg9IjkwIiB5PSI2MjAiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSBCbGFjaywgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsIEJsYWNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMDgiIGZpbGw9IiNGRkZGRkYiIGZvbnQtd2VpZ2h0PSI5MDAiIGxldHRlci1zcGFjaW5nPSItMiI+REVTQ09NUExJQ0FETzwvdGV4dD4NCjxyZWN0IHg9IjkwIiB5PSI2OTAiIHdpZHRoPSIxOTAiIGhlaWdodD0iOSIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iMC45Ii8+DQo8dGV4dCB4PSI5MCIgeT0iODAwIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjUwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjk3Ij5PIG3DqXRvZG8gcXVlIHRyYW5zZm9ybWEgbyBFeGNlbDwvdGV4dD4NCjx0ZXh0IHg9IjkwIiB5PSI4NjYiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9IjAuOTciPmVtIGZlcnJhbWVudGEgZGUgdHJhYmFsaG88L3RleHQ+DQo8cmVjdCB4PSI5MCIgeT0iMTA0MCIgd2lkdGg9IjQxMCIgaGVpZ2h0PSI3NCIgZmlsbD0iI0ZGRkZGRiIgcng9IjM3IiBvcGFjaXR5PSIwLjE0Ii8+DQo8dGV4dCB4PSIyOTUuMCIgeT0iMTA4OSIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBTZWdvZSBVSSBTZW1pYm9sZCwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0iI0ZGRkZGRiIgZm9udC13ZWlnaHQ9IjYwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+NiBwbGFuaWxoYXMgcHJvbnRhczwvdGV4dD4NCjxyZWN0IHg9IjkwIiB5PSIxMTM2IiB3aWR0aD0iMjEwIiBoZWlnaHQ9Ijc0IiBmaWxsPSIjRkZGRkZGIiByeD0iMzciIG9wYWNpdHk9IjAuMTQiLz4NCjx0ZXh0IHg9IjE5NS4wIiB5PSIxMTg1IiBmb250LWZhbWlseT0iU2Vnb2UgVUksIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSIjRkZGRkZGIiBmb250LXdlaWdodD0iNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj41IG3Ds2R1bG9zPC90ZXh0Pg0KPHJlY3QgeD0iOTAiIHk9IjEyMzIiIHdpZHRoPSI0NzAiIGhlaWdodD0iNzQiIGZpbGw9IiNGRkZGRkYiIHJ4PSIzNyIgb3BhY2l0eT0iMC4xNCIvPg0KPHRleHQgeD0iMzI1LjAiIHk9IjEyODEiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiNGRkZGRkYiIGZvbnQtd2VpZ2h0PSI2MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjM3IGbDs3JtdWxhcyBjb21lbnRhZGFzPC90ZXh0Pg0KPGxpbmUgeDE9IjkwIiB5MT0iMTM1MiIgeDI9IjkxMCIgeTI9IjEzNTIiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjM1Ii8+DQo8dGV4dCB4PSI5MCIgeT0iMTQzNCIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBTZWdvZSBVSSBTZW1pYm9sZCwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MCIgZmlsbD0iI0ZGRkZGRiIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjYiPlNUU0NPUlA8L3RleHQ+DQo8dGV4dCB4PSI5MCIgeT0iMTQ4NCIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBTZWdvZSBVSSBTZW1pYm9sZCwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iMC43MiI+UGFyYSBxdWVtIG51bmNhIGZvaSBlbnNpbmFkbyBhIHVzYXIgbyBFeGNlbDwvdGV4dD4NCjwvZz4NCjwvZz4NCjwvc3ZnPg0K" width="1000" height="1414"
+             alt="Capa do eBook Excel Descomplicado">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="par">
+  <div class="wrap">
+    <div class="rot">O problema</div>
+    <h2>Ninguém nunca te ensinou a lógica</h2>
+    <p class="lead">Você aprendeu Excel copiando arquivo de arquivo. Funciona até
+    o dia em que você precisa montar o seu — e aí não tem de onde pegar.</p>
+    <div class="cards">
+    <div class="card">
+      <div class="n">1</div>
+      <h3>A planilha quebra</h3>
+      <p>Alguém digitou por cima de uma célula de fórmula e o relatório virou <code>#VALOR!</code>. Não foi erro de fórmula: foi célula de entrada aberta para digitação livre.</p>
+    </div>
+    <div class="card">
+      <div class="n">2</div>
+      <h3>Ninguém ensinou a lógica</h3>
+      <p>Você aprendeu Excel copiando arquivo de arquivo. Na hora de montar a sua própria, não há de onde pegar — e a culpa parece ser sua.</p>
+    </div>
+    <div class="card">
+      <div class="n">3</div>
+      <h3>Você recomeça toda semana</h3>
+      <p>Duas horas construindo um relatório que já existiu mês passado. O gargalo raramente é o Excel: é não ter a estrutura pronta.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rot">O programa</div>
+    <h2>O que você aprende, módulo por módulo</h2>
+    <p class="lead">Cada módulo constrói sobre o anterior e fecha com um projeto
+    pronto. Nada de decoreba de menu.</p>
+    <div class="mod">
+      <div><div class="num">01</div><h3>Módulo 1</h3><p class="sub">Interface e navegação essencial</p></div>
+      <ul><li>Como o cérebro do Excel funciona</li><li>Primeiro contato com a tela</li><li>Atalhos vitais (economizam 50% do seu tempo)</li><li>Inserindo e formatando dados: texto, número e data</li><li>Os 5 erros comuns que quebram planilhas (e como evitar)</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">02</div><h3>Módulo 2</h3><p class="sub">Organização visual e tabelas profissionais</p></div>
+      <ul><li>De dados brutos a tabela legível</li><li>Formatação profissional em 4 movimentos</li><li>Congelando painéis e domando planilhas gigantes</li><li>Formatar como Tabela: um clique que faz tudo</li><li>Validação de dados: a planilha que se protege sozinha</li><li>Projeto do módulo: Controle de Gastos da Família</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">03</div><h3>Módulo 3</h3><p class="sub">Funções fundamentais</p></div>
+      <ul><li>Referências: o &quot;$&quot; que salva o seu trabalho</li><li>Os 4 operadores (e a ordem deles)</li><li>As 6 funções que resolvem 80% do escritório</li><li>SOMASE: o resumo por categoria</li><li>PROCV — o casamento entre duas tabelas</li><li>PROCX: a versão moderna (e quando usar cada uma)</li><li>Os erros que o Excel grita (e como consertar)</li><li>A cura do texto disfarçado de número</li><li>Projeto do módulo: Controle de Vendas com lucro</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">04</div><h3>Módulo 4</h3><p class="sub">Análise de dados e automação básica</p></div>
+      <ul><li>Tabela dinâmica: o resumo que se refaz sozinho</li><li>Segmentação de dados: o filtro que parece botão</li><li>Formatação condicional: a planilha que grita o erro sozinha</li><li>Fórmulas de data — as 5 que você usa todo dia</li><li>Gráficos: 3 tipos, 3 regras</li><li>Quando o PROCV falha: ÍNDICE + CORRESP</li><li>Automação sem programar: a montagem que se atualiza</li></ul>
+    </div>
+    <div class="mod">
+      <div><div class="num">05</div><h3>Módulo 5</h3><p class="sub">Ecossistema e projeto integrado</p></div>
+      <ul><li>Onde você chegou (leia antes de continuar)</li><li>Várias planilhas que se falam</li><li>Nomes definidos: transformar fórmula em frase</li><li>Planilha na nuvem: o celular também</li><li>Backup e versionamento: a disciplina que salva o trabalho</li><li>Do Excel para o produto: como sua planilha vira receita</li><li>PROJETO INTEGRADO: Controle Financeiro da Empresa</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="par">
+  <div class="wrap">
+    <div class="rot">O que vem junto</div>
+    <h2>O que chega, e quando chega</h2>
+    <p class="lead">A entrega é em <b>duas etapas</b>, e as duas são avisadas.
+    As 6 planilhas não são exemplos soltos: elas evoluem do
+    Módulo 2 ao Módulo 5 e terminam num painel de controle financeiro.
+    Você aprende construindo e ainda fica com o resultado pronto.</p>
+    <div class="cards etapas">
+      <div class="card etapa">
+        <div class="quando">Assim que o pagamento confirmar</div>
+        <h3>Na hora da compra</h3>
+        <p>o método inteiro e as planilhas para você praticar</p>
+        <ul class="itens"><li><b>Excel_Descomplicado.pdf</b><span>o eBook completo, com sumário de links e os 37 blocos de fórmula comentados</span></li><li><b>Excel_Descomplicado_Gabaritos.zip</b><span>as 5 planilhas de exercício já resolvidas, com o LEIA-ME</span></li></ul>
+      </div>
+      <div class="card etapa">
+        <div class="quando">7 dias depois da compra</div>
+        <h3>7 dias depois</h3>
+        <p>o painel financeiro pronto e o guia que explica ele</p>
+        <ul class="itens"><li><b>Bonus_Controle_Financeiro.zip</b><span>o Dashboard_Controle_Financeiro.xlsx e as instruções de uso</span></li><li><b>Bonus_Quick_Start.pdf</b><span>o guia do bônus em PDF, para quem prefere ler fora do `.zip`</span></li></ul>
+      </div>
+    </div>
+    <p class="nota">O bônus vem no segundo passo porque os 7 dias do
+    artigo 49 são justamente o prazo em que você pode pedir reembolso.
+    Assim você conhece o método antes de decidir, e ninguém precisa sair
+    perdendo: quem devolver na janela ainda não tinha recebido o bônus.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rot">Antes de comprar</div>
+    <h2>Este eBook é para você se…</h2>
+    <div class="dos">
+      <div class="lado sim">
+        <h3>É para você se</h3>
+        <ul>
+          <li>você nunca foi ensinado a usar o Excel e trava na hora de montar
+              a própria planilha</li>
+          <li>as planilhas da sua equipe quebram porque alguém digita errado
+              em célula de fórmula</li>
+          <li>você refaz do zero todo relatório que já existiu mês passado</li>
+          <li>quer aprender <code>PROCV</code>, tabela dinâmica e validação de
+              dados sem curso de 40 horas</li>
+          <li>prefere entender a lógica a decorar o caminho de cada menu</li>
+        </ul>
+      </div>
+      <div class="lado nao">
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>você procura VBA, Power Query, Power BI ou macros — não tem</li>
+          <li>já domina <code>PROCV</code>, tabela dinâmica e validação no
+              automático e quer aprofundar</li>
+          <li>quer aula ao vivo, comunidade, mentoria ou suporte por WhatsApp —
+              este é um eBook, não é um curso</li>
+          <li>procura certificação, certificado ou garantia de resultado financeiro</li>
+          <li>quer comprar uma licença que cubra a equipe toda — a licença é
+              pessoal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="par">
+  <div class="wrap">
+    <div class="rot">O investimento</div>
+    <h2>Pagamento único. Sem assinatura.</h2>
+    <div class="preco">
+      <div class="rot">Entrega em 2 etapas</div>
+      <div class="valor"><small>R$</small>29,90</div>
+      <p class="detalhe">Uma vez. Sem cobrança recorrente, sem mensalidade,
+      sem taxa de renovação.</p>
+      <a class="btn" href="https://pay.kiwify.com.br/S9uVHFb">Quero aprender Excel de verdade</a>
+      <ul>
+        <li>39 páginas · 5 módulos · sumário com links</li>
+        <li>37 blocos de fórmula comentados, passo a passo</li>
+        <li>6 planilhas .xlsx validadas no Excel de verdade</li>
+        <li>Bônus no 7º dia: painel de controle financeiro com guia</li>
+        <li>Edição de 2026, sem cobrança de assinatura</li>
+      </ul>
+      <div class="garantia">
+        <span>Garantia de 7 dias — se não servir, é só pedir o reembolso.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rot">Dúvidas</div>
+    <h2>Perguntas que aparecem antes de pagar</h2>
+    <div class="faq">
+      <details>
+        <summary>O que eu recebo, e quando?</summary>
+        <div class="resp"><p>A entrega é em 2 etapas e você é avisado de cada uma: <b>Excel_Descomplicado.pdf e Excel_Descomplicado_Gabaritos.zip</b>, assim que o pagamento confirmar; e <b>Bonus_Controle_Financeiro.zip e Bonus_Quick_Start.pdf</b>, 7 dias depois da compra. O bônus fica no segundo passo porque é ele que vem com o painel financeiro já pronto, e porque os 7 dias do artigo 49 são justamente o prazo em que você pode pedir reembolso. Assim você conhece o método antes de decidir, e ninguém precisa sair perdendo: quem devolver na janela ainda não tinha recebido o bônus.</p></div>
+      </details>
+      <details>
+        <summary>Por que o bônus não vem junto?</summary>
+        <div class="resp"><p>Os 7 dias do artigo 49 do Código de Defesa do Consumidor são o prazo em que você pode pedir reembolso -- então o método vem primeiro, para você ler e decidir com o produto na mão. Quem quer o bônus recebe 7 dias depois, avisado. Quem quiser devolvê-lo nessa janela recebe o reembolso e não perde nada: ainda não tinha recebido.</p></div>
+      </details>
+      <details>
+        <summary>Preciso de Excel instalado?</summary>
+        <div class="resp"><p>Para ler o PDF, não. Para fazer os exercícios, sim — o livro é escrito com o programa aberto do lado. Qualquer navegador abre o PDF.</p></div>
+      </details>
+      <details>
+        <summary>Qual versão do Excel serve?</summary>
+        <div class="resp"><p>Microsoft Excel 2016 ou mais novo. A única exceção é o PROCX (XLOOKUP), que só existe no Excel 2021 e no Microsoft 365 — o livro avisa isso e mostra o PROCV como alternativa.</p></div>
+      </details>
+      <details>
+        <summary>Funciona no Mac?</summary>
+        <div class="resp"><p>O conteúdo funciona; os atalhos de teclado são os do Windows e o PROCX não existe no Excel para Mac. O PROCV, que cobre os mesmos casos, está todo explicado.</p></div>
+      </details>
+      <details>
+        <summary>Sou iniciante absoluto. Serve?</summary>
+        <div class="resp"><p>É para você. O Módulo 1 é inteiramente básico: a tela, as células, o que é linha e coluna, como a planilha pensa.</p></div>
+      </details>
+      <details>
+        <summary>Já sei o básico. Vou perder meu tempo?</summary>
+        <div class="resp"><p>Talvez. Não é um curso de Excel avançado: não tem VBA, nem Power Query, nem Power BI. O que ele ensina bem é montar planilha que aguenta uso real — estrutura, validação e tratamento de erro.</p></div>
+      </details>
+      <details>
+        <summary>As planilhas vêm com as fórmulas?</summary>
+        <div class="resp"><p>Vêm, comentadas linha a linha. Uma ressalva: G03_Controle_de_Vendas.xlsx tem um <code>PROCV</code> apontando para célula vazia e mostra <code>#N/D</code> de propósito — é o exercício de diagnosticar erro. Está escrito no material.</p></div>
+      </details>
+      <details>
+        <summary>Abre no Google Sheets ou no LibreOffice?</summary>
+        <div class="resp"><p>As planilhas foram feitas e validadas no Microsoft Excel, e é para isso que o livro assume. Formatação condicional e validação de dados se comportam diferente fora do Excel. O PDF não tem problema nenhum.</p></div>
+      </details>
+      <details>
+        <summary>Posso comprar para a minha equipe?</summary>
+        <div class="resp"><p>A licença é pessoal: uma cópia por pessoa. Para time inteiro ainda não temos opção formatada — fale com a gente dentro da plataforma onde você comprou.</p></div>
+      </details>
+      <details>
+        <summary>Como funciona a garantia?</summary>
+        <div class="resp"><p>7 dias, conforme o artigo 49 do Código de Defesa do Consumidor, que dá direito de arrependimento em compra online. O pedido é feito dentro da plataforma onde você comprou e o reembolso sai em até 7 dias, pelo mesmo meio de pagamento. Você não precisa explicar por que desistiu.</p></div>
+      </details>
+      <details>
+        <summary>Em quanto tempo eu recebo?</summary>
+        <div class="resp"><p>O acesso é liberado automático para o e-mail informado na compra, assim que o pagamento é confirmado. Confira a caixa de spam e a pasta de promoções.</p></div>
+      </details>
+      <details>
+        <summary>Vão atualizar o livro?</summary>
+        <div class="resp"><p>Esta é a edição de 2026, e não prometemos atualização vitalícia. É melhor assim: a compra é de uma edição específica, e qualquer revisão futura entra como produto novo, com preço próprio, avisando antes quem já comprou. O que não fazemos é dizer que sai de graça algo que ainda não foi escrito.</p></div>
+      </details>
+    </div>
+    <p style="margin-top:22px;color:var(--cinza);font-size:.95rem">Dúvida que
+    não está aqui? Abra o seu pedido dentro da plataforma onde você comprou e fale com a gente por lá.</p>
+  </div>
+</section>
+
+<section class="fim">
+  <div class="wrap">
+    <img class="arte" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYwMCIgaGVpZ2h0PSIxMjAwIiB2aWV3Qm94PSIwIDAgMTYwMCAxMjAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idCBkIj4NCjx0aXRsZSBpZD0idCI+RXhjZWwgRGVzY29tcGxpY2FkbyAtIG1vY2t1cCAzRDwvdGl0bGU+DQo8ZGVzYyBpZD0iZCI+TGl2cm8gZW0gcGVyc3BlY3RpdmEgc29icmUgZnVuZG8gY2xhcm8sIHBhcmEgYSBww6FnaW5hIGRlIHZlbmRhcy48L2Rlc2M+DQo8ZGVmcz4NCiAgPGZpbHRlciBpZD0ic29tYnJhIiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNjAlIj4NCiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyNiIvPg0KICA8L2ZpbHRlcj4NCiAgPGZpbHRlciBpZD0ic29tYnJhX2ZvcnRlIiB4PSItMzAlIiB5PSItMzAlIiB3aWR0aD0iMTYwJSIgaGVpZ2h0PSIxNjAlIj4NCiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0NCIvPg0KICA8L2ZpbHRlcj4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJndmVyZGUiIHgxPSIwIiB5MT0iMCIgeDI9IjAuMzUiIHkyPSIxIj4NCiAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyMTczNDYiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxODVDMzciLz4NCiAgPC9saW5lYXJHcmFkaWVudD4NCiAgPGxpbmVhckdyYWRpZW50IGlkPSJnY2FwYSIgeDE9IjAiIHkxPSIwIiB4Mj0iMC42IiB5Mj0iMSI+DQogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMkE4QjU3Ii8+DQogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTg1QzM3Ii8+DQogIDwvbGluZWFyR3JhZGllbnQ+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ2xpdnJvIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+DQogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNDIiLz4NCiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTIwMCIgZmlsbD0iI0Y3RjhGQSIvPg0KPGVsbGlwc2UgY3g9IjEzODAiIGN5PSIxOTAiIHJ4PSIzMzAiIHJ5PSIzMzAiIGZpbGw9IiMyMTczNDYiIG9wYWNpdHk9IjAuMTMiLz4NCjxlbGxpcHNlIGN4PSIxODAiIGN5PSIxMDkwIiByeD0iMzAwIiByeT0iMzAwIiBmaWxsPSIjMUEyMzMyIiBvcGFjaXR5PSIwLjA3Ii8+DQo8cG9seWdvbiBwb2ludHM9IjI3Mi40LDI2Ny44MiA3MzUuNjAwMDAwMDAwMDAwMSw4OS4zMiA4NDkuMCwxMjUuNzk5OTk5OTk5OTk5OTggNTY0LjQ4LDEwMjAuODgiIGZpbGw9IiMxQTIzMzIiIG9wYWNpdHk9IjAuMjgiLz4NCjxnIGZpbHRlcj0idXJsKCNzb21icmEpIj4NCjxyZWN0IHg9Ii0xNCIgeT0iLTE0IiB3aWR0aD0iMTAyOCIgaGVpZ2h0PSIxNDQyIiBmaWxsPSIjRkZGRkZGIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjU0LC0wLjA3OCwwLjEyLDAuNTcsMjEwLjAsMTMwLjApIi8+DQo8cmVjdCB4PSItNCIgeT0iLTQiIHdpZHRoPSIxMDA4IiBoZWlnaHQ9IjE0MjIiIGZpbGw9IiNGN0Y4RkEiIHRyYW5zZm9ybT0ibWF0cml4KDAuNTQsLTAuMDc4LDAuMTIsMC41NywyMTAuMCwxMzAuMCkiLz4NCjxwb2x5Z29uIHBvaW50cz0iMjAwLjc2LDEyMy4xMTIgMjEwLjAsMTMwLjAgMzc5LjY4LDkzNS45Nzk5OTk5OTk5OTk5IDM2OC43Niw5MjEuMTEyIiBmaWxsPSIjMTg1QzM3Ii8+DQo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSIxNDE0IiBmaWxsPSJ1cmwoI2djYXBhKSIgdHJhbnNmb3JtPSJtYXRyaXgoMC41NCwtMC4wNzgsMC4xMiwwLjU3LDIxMC4wLDEzMC4wKSIvPg0KPHBvbHlnb24gcG9pbnRzPSIyMTAuMCwxMzAuMCA3NTAuMCw1Mi4wIDc1MC45Niw1Ni41NiAyMTAuOTYsMTM0LjU2IiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjE4Ii8+DQo8ZyB0cmFuc2Zvcm09J21hdHJpeCgwLjU0LC0wLjA3OCwwLjEyLDAuNTcsMjEwLjAsMTMwLjApJz4NCjx0ZXh0IHg9IjkwIiB5PSIyMTAiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiNGRkZGRkYiIGZvbnQtd2VpZ2h0PSI2MDAiIGxldHRlci1zcGFjaW5nPSI0Ij5FQk9PSyDCtyBNw5NEVUxPUyAxIEFPIDU8L3RleHQ+DQo8dGV4dCB4PSI5MCIgeT0iNDcwIiBmb250LWZhbWlseT0iU2Vnb2UgVUkgQmxhY2ssIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCBCbGFjaywgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTY4IiBmaWxsPSIjRkZGRkZGIiBmb250LXdlaWdodD0iOTAwIj5FWENFTDwvdGV4dD4NCjx0ZXh0IHg9IjkwIiB5PSI2MjAiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSBCbGFjaywgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsIEJsYWNrLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMDgiIGZpbGw9IiNGRkZGRkYiIGZvbnQtd2VpZ2h0PSI5MDAiIGxldHRlci1zcGFjaW5nPSItMiI+REVTQ09NUExJQ0FETzwvdGV4dD4NCjxyZWN0IHg9IjkwIiB5PSI2OTAiIHdpZHRoPSIxOTAiIGhlaWdodD0iOSIgZmlsbD0iI0ZGRkZGRiIgb3BhY2l0eT0iMC45Ii8+DQo8dGV4dCB4PSI5MCIgeT0iODAwIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjUwIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjk3Ij5PIG3DqXRvZG8gcXVlIHRyYW5zZm9ybWEgbyBFeGNlbDwvdGV4dD4NCjx0ZXh0IHg9IjkwIiB5PSI4NjYiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiNGRkZGRkYiIG9wYWNpdHk9IjAuOTciPmVtIGZlcnJhbWVudGEgZGUgdHJhYmFsaG88L3RleHQ+DQo8L2c+DQo8L2c+DQo8cG9seWdvbiBwb2ludHM9IjM1OS4yOCw5NDQuOCA5MzEuMDgsODMyLjgzOTk5OTk5OTk5OTkgOTY5LjAsODU0LjM4IDM5Ny4yMDAwMDAwMDAwMDAwNSw5NjYuMzQiIGZpbGw9IiMxQTIzMzIiIG9wYWNpdHk9IjAuMjIiLz4NCjx0ZXh0IHg9IjExMjAiIHk9IjQ3MCIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBTZWdvZSBVSSBTZW1pYm9sZCwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NiIgZmlsbD0iIzFBMjMzMiIgZm9udC13ZWlnaHQ9IjcwMCI+TyBxdWUgdm9jw6o8L3RleHQ+DQo8dGV4dCB4PSIxMTIwIiB5PSI1MjYiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDYiIGZpbGw9IiMxQTIzMzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnJlY2ViZSBubzwvdGV4dD4NCjx0ZXh0IHg9IjExMjAiIHk9IjU4MiIgZm9udC1mYW1pbHk9IlNlZ29lIFVJLCBTZWdvZSBVSSBTZW1pYm9sZCwgQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NiIgZmlsbD0iIzFBMjMzMiIgZm9udC13ZWlnaHQ9IjcwMCI+ZG93bmxvYWQ8L3RleHQ+DQo8cmVjdCB4PSIxMTIwIiB5PSI2MTYiIHdpZHRoPSIxMzAiIGhlaWdodD0iNiIgZmlsbD0iIzIxNzM0NiIvPg0KPHRleHQgeD0iMTEyMCIgeT0iNjc4IiBmb250LWZhbWlseT0iU2Vnb2UgVUksIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2IiBmaWxsPSIjNUE2NDcyIj42IHBsYW5pbGhhcyBwcm9udGFzIHBhcmEgYWJyaXIgZSB1c2FyLCBjb20gYXMgZsOzcm11bGFzIGrDoSBlc2NyaXRhcy48L3RleHQ+DQo8dGV4dCB4PSIxMTIwIiB5PSI3MTYiIGZvbnQtZmFtaWx5PSJTZWdvZSBVSSwgU2Vnb2UgVUkgU2VtaWJvbGQsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1QTY0NzIiPjUgbcOzZHVsb3MgwrcgMzkgcMOhZ2luYXMgwrcgMzcgZsOzcm11bGFzPC90ZXh0Pg0KPHRleHQgeD0iMTEyMCIgeT0iNzUyIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIFNlZ29lIFVJIFNlbWlib2xkLCBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjNUE2NDcyIj5jb21lbnRhZGFzIMK3IDYgcGxhbmlsaGFzIGVtIC54bHN4PC90ZXh0Pg0KPC9zdmc+DQo=" width="1600" height="1200"
+         alt="Excel Descomplicado em perspectiva, com o resumo do que vem no download">
+    <h2>Da planilha quebrada à planilha que aguenta uso real</h2>
+    <p class="lead" style="max-width:36em;margin:0 auto 6px">5 módulos,
+    39 páginas e 6 planilhas prontas. R$ 29,90, garantia
+    de 7 dias, módulo completo na hora e bônus no 7º dia.</p>
+    <div class="cta">
+      <a class="btn" href="https://pay.kiwify.com.br/S9uVHFb">Quero aprender Excel de verdade</a>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p><strong style="color:var(--tinta)">Excel Descomplicado</strong> ·
+    STSCORP · edição de 2026.</p>
+    <p>Licença pessoal de leitura. Não é permitido revender, redistribuir ou
+    postar os arquivos. Compra sujeita à garantia legal de 7 dias do artigo 49
+    do Código de Defesa do Consumidor. O reembolso sai em até 7 dias, pelo
+    mesmo meio de pagamento.</p>
+    <p>Atendimento: dentro da plataforma onde você comprou.</p>
+  </div>
+</footer>
+
+</body>
+</html>
