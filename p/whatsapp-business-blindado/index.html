@@ -154,8 +154,15 @@ s{opacity:.75}
 .oferta .btn{font-size:20px;padding:20px 44px}
 .oferta .micro{color:var(--cinza-claro)}
 .incluso{list-style:none;margin:26px auto 0;padding:0;max-width:560px;text-align:left}
-.incluso li{padding-left:30px;position:relative;margin-bottom:9px;color:#E7F3EF}
-.incluso li::before{content:"\2713";position:absolute;left:0;color:var(--esm);font-weight:700}
+/* 13/10/2026 (CEO): a lista do "Bonus incluso" e' desenhada no fundo BRANCO da
+   pagina, e a regra base pintava o item de quase-branco (#E7F3EF, o tom de
+   sobre-capa) -- texto ilegivel sobre papel. A base passa a ser tinta no papel;
+   o tom claro nao foi apagado, foi preso ao unico lugar onde ele funciona (a
+   oferta, que tem fundo escuro). */
+.incluso li{padding-left:30px;position:relative;margin-bottom:9px;color:var(--tinta)}
+.incluso li::before{content:"\2713";position:absolute;left:0;color:var(--esm-esc);font-weight:700}
+.oferta .incluso li{color:#E7F3EF}
+.oferta .incluso li::before{color:var(--esm)}
 
 .garantia{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;
   background:var(--papel);border:1px solid #DCE7E3;border-radius:var(--raio);padding:26px}
